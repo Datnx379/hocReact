@@ -1,7 +1,12 @@
+import { NavBar } from 'components'
 import React from 'react'
 
 export const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <>
+      <p>llll
+        
+      </p>
+    </>
   )
 }

@@ -1,20 +1,20 @@
-import { Route } from 'react-router-dom'
-import './App.css'
+import { Route, Routes } from 'react-router-dom'
 import { NavBar } from './components/navBar'
-import { Features, HomePage, Programs, Reviews, Teaching } from './pages'
+import { Features, HomePage, Programs, Reviews, Teaching } from './pages';
+import "./styles.scss";
 
-function App() {
+export const App =() => {
 
   return (
     <div className='App'>
       <NavBar />
-      <Route path='' element={<Features />} />
-      <Route path='' element={<Programs />} />
-      <Route path='' element={<Reviews />} />
-      <Route path='' element={<Teaching/>} />
-      <Route path='' element={<HomePage />} />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/features' element={<Features />} />
+        <Route path='/programs' element={<Programs />} />
+        <Route path='reviews' element={<Reviews />} />
+        <Route path='teaching' element={<Teaching/>} />
+      </Routes>
     </div>
   )
 }
-
-export default App
